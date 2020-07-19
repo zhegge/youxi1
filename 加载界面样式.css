@@ -1,0 +1,108 @@
+body{
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex; /*弹性盒子，能让子级元素居中显示*/
+			align-items: center; /*居中对齐弹性盒的各项<div>元素*/
+			justify-content: center;  /*项目能位于容器的中心*/
+		}
+		.loading{
+			width: 400px;
+			height: 400px;
+			box-sizing: border-box;/*高200和宽200已经包含了元素的内边距和外边距*/
+			border-top: 30px solid #f4a261;
+			border-radius: 50%;
+			position: relative;
+			animation: a1  2s linear infinite; /*css3做的一个动画，使用了animation属性，是复合属性，
+			a1指的是动画的名称，2s可以定义完成一次动画所需时间，也就是动画的速度，
+			linear指的是动画匀速进行，infinite指的是动画是无限循环的*/
+		}
+		.loading::before,.loading::after{ /*添加了伪类元素，分别给loading样式前面和后面添加了相同的样式*/
+			content: '';
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0;
+			top: -10px;
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
+		.loading::before{
+			border-top: 30px solid #264653;
+			transform: rotate(120deg); /*css3中的一种属性，是用来设置元素的旋转
+			，单位deg是度数的意思，这里是设置元素旋转120度*/
+
+		}  
+
+		.loading::after{   
+			border-top: 30px solid #e76f51;
+			transform: rotate(240deg);
+			/*这里是设置元素旋转240度 loading部分被分成了3部分*/
+
+		}
+		.loading span{
+			position: absolute;/*这里设置了loading的位置*/
+			width: 400px;
+			height: 400px;
+			color: black;
+			font-size: 50px;
+			text-align: center;
+			line-height: 200px;/*这里设置了loading的大小以及样式*/
+			animation: a2 2s linear infinite;
+			/*这里设置了loading的旋转*/
+		}
+
+		@keyframes a1{
+			to{
+				transform: rotate(360deg); /*定义了动画规则，动画是怎么变化的，
+				对外面的圆圈动画进行设置， to{}表示的是要动画要实现的状态，这里表示的是动画要旋转360度*/
+			}
+		}
+		@keyframes a2{
+			to{
+				transform: rotate(-360deg);
+			}/*对里面的loading文字动画进行设置，向逆时针方向旋转*/	
+		}
+		.button{
+			/*position: fixed;
+			margin-top: 300px;
+			/*background-image: url(3.png);
+			background-position: 1px  120px ;
+			background-size: 180px;
+			text-align: center;
+            line-height: 200px;
+            text-align: center;
+            border:0px;*/
+             position: fixed;
+			margin-top: 700px;
+			/*设置了按钮的位置*/
+           border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3em;
+             box-shadow: 0 1px white inset;
+             /*设置了按钮边框的样式，包括边框大小，边框圆滑度，边框阴影等*/
+            text-align: center;
+            line-height: 50px;
+            /*设置了按钮文字居中，以及这个按钮的大小*/
+            cursor: pointer;
+            outline: none;
+            /*设置了当鼠标移到按钮上，鼠标会改变手势*/
+           }
+           .button :hover{
+           	background-color:#fbb32d;
+           	 /*设置了当鼠标移到按钮上，按钮的背景颜色会发生改变*/  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

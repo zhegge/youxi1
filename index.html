@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>加载界面</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="加载界面样式.css">
+	<link rel="stylesheet" href="背景变化样式.css">
+	<style type="text/css">
+		img{
+			margin-left: auto;
+			margin-top: 0px;
+			margin-bottom: 80px;
+
+			width:1800px;
+			height: 1300px;
+		}
+	
+	</style>
+
+</head>
+<body>
+	<div class="loading" id="loading" style="display: none;">
+		<span>
+			Loading.....
+		</span>
+	</div>
+	<div id="guize" class="guize" style="display: block;">
+		<img src="10.png">
+	</div>
+	<div class="text">
+	</div>
+
+	<div class="button">
+		<!--<input type="button" name="button"id="anniu" value="进入游戏">-->
+		<button id="anniu" style="width: 500px; height: 100px;">进入游戏</button>
+	</div>
+	<script type="text/javascript">
+		var  anniu=document.getElementById('anniu');
+		var url="网页小游戏.html"
+		anniu.onclick=function(){
+			document.getElementById('loading').style.display="block";
+			document.getElementById('guize').style.display="none";
+			var int=self.setInterval(function(){
+				window.location.href="游戏.html";
+			},4000)
+			}
+	
+			
+	
+	</script>
+
+</body>
+</html>

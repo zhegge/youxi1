@@ -1,0 +1,20 @@
+body{
+
+	background-image: linear-gradient(125deg,#264653, #2a9d8f, #e9c46a, #f4a261,#ffd6ba,#fff1e6,#457b9d);/*用了linear-gradient属性对背景设置了渐变，分别是渐变的角度，还有渐变的各种颜色*/
+	background-size: 400%; /*size要大于100，才能明显的看到渐变效果*/
+	animation: q1 10s infinite; /*仍然是用animation属性做了一个动画*/
+}
+
+@keyframes q1{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100%{
+		background-position: 0% 50%;
+	}
+}
+/*定义动画规则，CSS3里面用%来指定变化的发生，在0%、50%、100%三个状态下，背景图像的位置，从而形成动画*/
